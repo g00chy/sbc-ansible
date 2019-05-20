@@ -1,0 +1,9 @@
+---
+- hosts: web
+  become: true
+  tasks:
+    - name: apt update
+      apt:
+        name: '*'
+        state: latest
+        update_cache: yes
