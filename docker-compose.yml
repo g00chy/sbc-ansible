@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  ansible:
+    build:
+      context: ./docker/python
+    volumes:
+      - ./ansible:/ansible/
+      - key-dir:/key
+    working_dir: /ansible
+volumes:
+  key-dir:
