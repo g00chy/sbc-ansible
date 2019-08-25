@@ -1,2 +1,3 @@
 *.retry
 .vagrant
+ansible/nopass_key
