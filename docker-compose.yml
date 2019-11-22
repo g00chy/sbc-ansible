@@ -6,7 +6,5 @@ services:
       context: ./docker/python
     volumes:
       - ./ansible:/ansible/
-      - key-dir:/key
     working_dir: /ansible
-volumes:
-  key-dir:
+    command: ansible-playbook -i ansible-host.yml ansible-package.yml
