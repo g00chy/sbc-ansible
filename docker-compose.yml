@@ -7,4 +7,4 @@ services:
     volumes:
       - ./ansible:/ansible/
     working_dir: /ansible
-    command: ansible-playbook -i ansible-host.yml ansible-package.yml
+    command: ansible-playbook -i ansible-host.yml playbook.yml

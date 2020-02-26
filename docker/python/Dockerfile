@@ -1,4 +1,4 @@
-FROM python:3
+FROM arm64v8/python
 
 RUN apt-get update
 RUN apt-get -y install locales && \
@@ -16,4 +16,4 @@ RUN pip install --upgrade ansible
 RUN mkdir /key
 RUN ls -la 
 ADD nopass_key /key
-RUN chmod 600 /key nopass_key
+RUN chmod 600 /key/nopass_key
