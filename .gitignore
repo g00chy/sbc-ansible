@@ -2,3 +2,4 @@
 .vagrant
 ansible/nopass_key
 docker/python/nopass_key
+ansible/roles/geerlingguy.docker
