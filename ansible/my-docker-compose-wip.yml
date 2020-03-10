@@ -1,0 +1,11 @@
+---
+# tasks file for docker
+- name: need pakcage install
+  apt:
+    pkg:
+      - libffi-dev
+      - python3-pip
+- name:  install docker-compose
+  pip:
+    executable: /usr/bin/pip3
+    name: docker-compose

@@ -2,4 +2,4 @@
 - hosts: docker
   become: true
   roles:
-    - roles/docker
+    - geerlingguy.docker
