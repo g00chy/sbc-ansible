@@ -1,5 +1,12 @@
 ---
 - hosts: docker
   become: true
+  tasks:
+    - name: package install
+      apt:
+        pkg:
+          - vim
+          - git
+          - nfs-common
   roles:
     - geerlingguy.docker
