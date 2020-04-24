@@ -3,3 +3,4 @@
 ansible/nopass_key
 docker/python/nopass_key
 ansible/roles/geerlingguy.docker
+ansible/roles/geerlingguy.kubernetes
