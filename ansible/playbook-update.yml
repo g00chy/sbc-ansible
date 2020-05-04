@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: sbcs
   become: true
   tasks:
     - name: apt update
