@@ -3,7 +3,6 @@ version: "3.3"
 services:
   ansible:
     build:
-      context: ./docker/python
-    volumes:
-      - ./ansible:/ansible/
+      context: ./
+      dockerfile: docker/python/Dockerfile
     working_dir: /ansible
