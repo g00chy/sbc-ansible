@@ -6,3 +6,9 @@ services:
       context: ./
       dockerfile: docker/python/Dockerfile
     working_dir: /ansible
+    volumes:
+      - ansible-galaxy:/etc/ansible/roles
+      - ansible-src:/ansible
+volumes:
+  ansible-galaxy:
+  ansible-src:

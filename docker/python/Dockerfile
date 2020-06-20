@@ -9,12 +9,10 @@ ENV LC_ALL ja_JP.UTF-8
 ENV TZ JST-9
 ENV TERM xterm
 
-RUN apt-get install -y vim less
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install --upgrade ansible
 RUN mkdir /key
-RUN ls -la 
 ADD nopass_key /key
 RUN chmod 600 /key/nopass_key
 ADD ./ansible /ansible

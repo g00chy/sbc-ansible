@@ -2,11 +2,17 @@
 - hosts: docker
   become: true
   tasks:
+#    - name: add raspberrypi respository
+#      apt_repository:
+#        repo: ppa:ubuntu-raspi2/ppa
+
     - name: package install
       apt:
         pkg:
           - vim
           - git
           - nfs-common
+#          - libraspberrypi-bin
+#          - libraspberrypi-dev
   roles:
     - geerlingguy.docker
