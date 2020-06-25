@@ -13,7 +13,6 @@ RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install --upgrade ansible
 RUN mkdir /key
-ADD nopass_key /key
+ADD docker/python/nopass_key /key
 RUN chmod 600 /key/nopass_key
-ADD ./ansible /ansible
-RUN chmod 755 /ansible
+ADD ansible/ansible.cfg /etc/ansible/ansible.cfg

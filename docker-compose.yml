@@ -8,7 +8,6 @@ services:
     working_dir: /ansible
     volumes:
       - ansible-galaxy:/etc/ansible/roles
-      - ansible-src:/ansible
+      - ./ansible/playbook:/ansible
 volumes:
   ansible-galaxy:
-  ansible-src:
