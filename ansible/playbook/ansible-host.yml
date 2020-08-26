@@ -1,31 +1,31 @@
 sbcs:
   hosts:
     pi1:
-      ansible_host: 192.168.10.4
+      ansible_host: 192.168.0.4
       ansible_user: pi
       ansible_ssh_private_key_file: /key/nopass_key
     pi2:
-      ansible_host: 192.168.10.5
+      ansible_host: 192.168.0.5
       ansible_user: pi
       ansible_ssh_private_key_file: /key/nopass_key
     pi3:
-      ansible_host: 192.168.10.6
+      ansible_host: 192.168.0.6
       ansible_user: pi
       ansible_ssh_private_key_file: /keynopass_key
     pi4-1:
-      ansible_host: 192.168.10.12
+      ansible_host: 192.168.0.12
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /keynopass_key
     pi4-2:
-      ansible_host: 192.168.10.13
+      ansible_host: 192.168.0.13
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
     pi4-3:
-      ansible_host: 192.168.10.14
+      ansible_host: 192.168.0.14
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
     pi4-4:
-      ansible_host: 192.168.10.15
+      ansible_host: 192.168.0.15
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
 docker:
@@ -33,18 +33,18 @@ docker:
     docker_apt_arch: arm64
   hosts:
     pi4-1:
-      ansible_host: 192.168.10.12
+      ansible_host: 192.168.0.12
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
     pi4-2:
-      ansible_host: 192.168.10.13
+      ansible_host: 192.168.0.13
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
     pi4-3:
-      ansible_host: 192.168.10.14
+      ansible_host: 192.168.0.14
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
     pi4-4:
-      ansible_host: 192.168.10.15
+      ansible_host: 192.168.0.15
       ansible_user: ubuntu
       ansible_ssh_private_key_file: /key/nopass_key
