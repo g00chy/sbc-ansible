@@ -9,5 +9,6 @@ services:
     volumes:
       - ansible-galaxy:/etc/ansible/roles
       - ./ansible/playbook:/ansible
+    env_file: .env
 volumes:
   ansible-galaxy:

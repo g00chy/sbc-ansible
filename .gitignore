@@ -6,3 +6,4 @@ ansible/playbook/roles/geerlingguy.docker
 ansible/playbook/roles/geerlingguy.kubernetes
 sbc-ansible.iml
 .idea
+.env
