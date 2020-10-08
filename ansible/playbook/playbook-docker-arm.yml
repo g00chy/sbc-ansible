@@ -1,0 +1,8 @@
+---
+- hosts: pi4s
+  become: true
+  tasks:
+
+  roles:
+    - geerlingguy.pip
+    - geerlingguy.docker_arm

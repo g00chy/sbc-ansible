@@ -34,9 +34,7 @@ high_servers:
       ansible_host: 192.168.0.10
       ansible_user: luna
       ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
-docker:
-  vars:
-    docker_apt_arch: arm64
+pi4s:
   hosts:
     pi4-1:
       ansible_host: 192.168.0.12

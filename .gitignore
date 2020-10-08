@@ -3,6 +3,8 @@
 ansible/nopass_key
 docker/python/nopass_key
 ansible/playbook/roles/geerlingguy.docker
+ansible/playbook/roles/geerlingguy.docker_arm
+ansible/playbook/roles/geerlingguy.pip
 ansible/playbook/roles/geerlingguy.kubernetes
 sbc-ansible.iml
 .idea
