@@ -5,10 +5,12 @@ services:
     build:
       context: ./
       dockerfile: docker/python/Dockerfile
-    working_dir: /ansible
+    working_dir: /home/ansible/ansible
+    user: ansible
     volumes:
       - ansible-galaxy:/etc/ansible/roles
-      - ./ansible/playbook:/ansible
+      - ./ansible:/home/ansible/ansible
+      - ./docker/python/nopass_key:/key/nopass_key
     env_file: .env
 volumes:
   ansible-galaxy:

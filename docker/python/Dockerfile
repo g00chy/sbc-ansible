@@ -1,18 +1,24 @@
-FROM python
+FROM python:alpine
 
-RUN apt-get update
-RUN apt-get -y install locales && \
-    localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
+RUN apk --no-cache add tzdata gcc libc-dev libffi-dev openssl-dev openssh-client && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 ENV LC_ALL ja_JP.UTF-8
 ENV TZ JST-9
 ENV TERM xterm
 
-RUN pip install --upgrade pip
-RUN pip install --upgrade setuptools
-RUN pip install --upgrade ansible
-RUN mkdir /key
-ADD docker/python/nopass_key /key
-RUN chmod 600 /key/nopass_key
-ADD ansible/ansible.cfg /etc/ansible/ansible.cfg
+RUN pip install --upgrade pip && \
+    pip install --upgrade setuptools && \
+    pip install --upgrade ansible
+
+
+RUN adduser -D ansible && \
+    echo "ansible ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    echo 'ansible:ansible' | chpasswd && \
+    mkdir /key && chown ansible:nobody /key  && \
+    mkdir /home/ansible/.ssh && \
+    chown ansible:nobody /home/ansible/.ssh
+COPY ./docker/python/nopass_key /home/ansible/.ssh/
+RUN chown ansible:nobody /home/ansible/.ssh/nopass_key
+# ADD ansible/ansible.cfg /etc/ansible/ansible.cfg

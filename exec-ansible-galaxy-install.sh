@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose run --rm ansible ansible-galaxy install -r requirements.yml -p roles
+docker-compose run --rm ansible ansible-galaxy install -r playbook/requirements.yml -p playbook/roles
