@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose run --rm ansible ansible-playbook -i ansible-host.yml playbook-update.yml
+docker-compose run --rm ansible ansible-playbook -i playbook/ansible-host.yml playbook/playbook-update.yml
