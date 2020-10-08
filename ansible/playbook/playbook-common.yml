@@ -1,0 +1,43 @@
+---
+- hosts: sbcs
+  become: true
+  tasks:
+    - name: package install
+      apt:
+        pkg:
+          - ethtool
+          - exuberant-ctags
+          - git
+          - iftop
+          - htop
+          - sudo
+          - tmux
+          - vim
+          - nfs-common
+          - nfs-kernel-server
+    - name: add exports
+      lineinfile:
+        dest: /etc/exports
+        line: /mnt/mynfs 192.168.0.0/255.255.255.0(rw,sync,no_subtree_check)
+    - name: add fstab
+      blockinfile:
+        path: /etc/fstab
+        insertbefore: "^# a swapfile"
+        block: |
+          192.168.0.2:/Multimedia/music /mnt/nfs/music nfs defaults 0 0
+          192.168.0.12:/mnt/mynfs /mnt/nfs/pi4-1 nfs defaults 0 0
+          192.168.0.13:/mnt/mynfs /mnt/nfs/pi4-2 nfs defaults 0 0
+          192.168.0.14:/mnt/mynfs /mnt/nfs/pi4-3 nfs defaults 0 0
+          192.168.0.15:/mnt/mynfs /mnt/nfs/pi4-4 nfs defaults 0 0
+    - name: mkdir
+      file: path={{ item }}
+        state=directory
+        owner=pi
+        group=pi
+        mode=0755
+      with_items:
+        - /mnt/mynfs
+        - /mnt/nfs/pi4-1
+        - /mnt/nfs/pi4-2
+        - /mnt/nfs/pi4-3
+        - /mnt/nfs/pi4-4
