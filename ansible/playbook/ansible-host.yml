@@ -3,52 +3,52 @@ sbcs:
     pi1:
       ansible_host: 192.168.0.4
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi2:
       ansible_host: 192.168.0.5
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi3:
       ansible_host: 192.168.0.6
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-1:
       ansible_host: 192.168.0.12
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-2:
       ansible_host: 192.168.0.13
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-3:
       ansible_host: 192.168.0.14
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-4:
       ansible_host: 192.168.0.15
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
 high_servers:
   hosts:
     a300:
       ansible_host: 192.168.0.10
       ansible_user: luna
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
 pi4s:
   hosts:
     pi4-1:
       ansible_host: 192.168.0.12
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-2:
       ansible_host: 192.168.0.13
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-3:
       ansible_host: 192.168.0.14
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key
     pi4-4:
       ansible_host: 192.168.0.15
       ansible_user: pi
-      ansible_ssh_private_key_file: /home/ansible/.ssh/nopass_key
+      ansible_ssh_private_key_file: /key/nopass_key

@@ -2,9 +2,7 @@ version: "3.3"
 
 services:
   ansible:
-    build:
-      context: ./
-      dockerfile: docker/python/Dockerfile
+    image: registry.localdomain/ansible
     working_dir: /home/ansible/ansible
     user: ansible
     volumes:
