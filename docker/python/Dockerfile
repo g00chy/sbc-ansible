@@ -21,4 +21,3 @@ RUN adduser -D ansible && \
     mkdir /key && chown ansible:nobody /key  && \
     mkdir /home/ansible/.ssh && \
     chown ansible:nobody /home/ansible/.ssh
-RUN chown ansible:nobody /home/ansible/.ssh/nopass_key
