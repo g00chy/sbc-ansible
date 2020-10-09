@@ -15,6 +15,7 @@
           - vim
           - nfs-common
           - nfs-kernel-server
+          - wakeonlan
     - name: add exports
       lineinfile:
         dest: /etc/exports
