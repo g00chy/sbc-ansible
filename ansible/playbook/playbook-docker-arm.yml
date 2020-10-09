@@ -1,12 +1,20 @@
 ---
 - hosts: pi4s
   become: true
+  vars:
+    dns: 192.168.0.12
+    registry_mirror: https://registry.localdomain
   tasks:
     - name: package install
       apt:
         pkg:
         - qemu-user-static
-
+    - name: docker daemon.json
+      template:
+        src: template/docker-daemon.json.j2
+        dest: /etc/docker/daemon.json
+      notify:
+        - restart docker
   roles:
     - geerlingguy.pip
     - geerlingguy.docker_arm

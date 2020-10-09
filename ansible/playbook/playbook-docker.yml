@@ -1,6 +1,15 @@
 ---
 - hosts: high_servers
   become: true
+  vars:
+    dns: 192.168.0.12
+    registry_mirror: https://registry.localdomain
   tasks:
+    - name: docker daemon.json
+      template:
+        src: template/docker-daemon.json.j2
+        dest: /etc/docker/daemon.json
+      notify:
+        - restart docker
   roles:
     - geerlingguy.docker
