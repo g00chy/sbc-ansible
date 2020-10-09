@@ -2,6 +2,10 @@
 - hosts: pi4s
   become: true
   tasks:
+    - name: package install
+      apt:
+        pkg:
+        - qemu-user-static
 
   roles:
     - geerlingguy.pip
