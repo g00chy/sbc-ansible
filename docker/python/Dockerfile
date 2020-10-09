@@ -22,4 +22,3 @@ RUN adduser -D ansible && \
     mkdir /home/ansible/.ssh && \
     chown ansible:nobody /home/ansible/.ssh
 RUN chown ansible:nobody /home/ansible/.ssh/nopass_key
-# ADD ansible/ansible.cfg /etc/ansible/ansible.cfg
