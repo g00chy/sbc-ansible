@@ -1,0 +1,7 @@
+---
+- hosts: master-node, worker-node
+  become: true
+  tasks:
+  roles:
+    - geerlingguy.docker
+    - geerlingguy.kubernetes
